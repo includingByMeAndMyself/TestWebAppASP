@@ -38,7 +38,7 @@ namespace TestWebApp.Domain.Repositories.EntityFramework
 
         public void DeleteServiceItem(Guid id)
         {
-            context.TextFields.Remove(new ServiceItem() { ID = id });
+            context.ServiceItems.Remove(new ServiceItem() { ID = id });
             context.SaveChanges();
         }
     }

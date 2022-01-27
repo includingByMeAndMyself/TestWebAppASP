@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace TestWebApp.Domain.Entitties
 {
-    public class ServiceItem : EntityBase
+    public class TextField : EntityBase
     {
         [Required]
         public string CodeWord { get; set; }

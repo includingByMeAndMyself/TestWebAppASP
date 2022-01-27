@@ -17,20 +17,20 @@ namespace TestWebApp.Domain.Repositories.EntityFramework
         {
             this.context = context;
         }
-        public IQueryable<ServiceItem> GetTextFields()
+        public IQueryable<TextField> GetTextFields()
         {
             return context.TextFields;
         }
 
-        public ServiceItem GetTextFieldById(Guid id)
+        public TextField GetTextFieldById(Guid id)
         {
             return context.TextFields.FirstOrDefault(x => x.ID == id);
         }
-        public ServiceItem GetTextFieldByCodeWord(string codeWord)
+        public TextField GetTextFieldByCodeWord(string codeWord)
         {
             return context.TextFields.FirstOrDefault(x => x.CodeWord == codeWord);
         }
-        public void SaveTextField(ServiceItem entity)
+        public void SaveTextField(TextField entity)
         {
             if (entity.ID == default)
                 context.Entry(entity).State = EntityState.Added;
@@ -41,7 +41,7 @@ namespace TestWebApp.Domain.Repositories.EntityFramework
         }
         public void DeletTextField(Guid id)
         {
-            context.TextFields.Remove(new ServiceItem() { ID = id });
+            context.TextFields.Remove(new TextField() { ID = id });
             context.SaveChanges();
         }       
     }

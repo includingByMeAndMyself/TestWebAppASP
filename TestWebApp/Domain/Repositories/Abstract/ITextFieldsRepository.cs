@@ -9,10 +9,10 @@ namespace TestWebApp.Domain.Repositories.Abstract
 {
     public interface ITextFieldsRepository
     {
-        IQueryable<ServiceItem> GetTextFields();
-        ServiceItem GetTextFieldById(Guid id);
-        ServiceItem GetTextFieldByCodeWord(string codeWord);
-        void SaveTextField(ServiceItem entity);
+        IQueryable<TextField> GetTextFields();
+        TextField GetTextFieldById(Guid id);
+        TextField GetTextFieldByCodeWord(string codeWord);
+        void SaveTextField(TextField entity);
         void DeletTextField(Guid id);
     }
 }
