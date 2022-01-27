@@ -8,7 +8,7 @@ using TestWebApp.Domain;
 using TestWebApp.Domain.Entitties;
 using TestWebApp.Service;
 
-namespace MyCompany.Areas.Admin.Controllers
+namespace TestWebApp.Areas.Admin.Controllers
 {
     [Area("Admin")]
     public class ServiceItemsController : Controller
